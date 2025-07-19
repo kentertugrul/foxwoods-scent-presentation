@@ -1,0 +1,733 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2860
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww29720\viewh16380\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Foxwoods x leparfum.ai Partnership</title>\
+    <style>\
+        /* \
+        Note: Coloseum is a custom font. To use it, add this before the style tag:\
+        <link href="path-to-your-coloseum-font.css" rel="stylesheet">\
+        Or use @font-face:\
+        @font-face \{\
+            font-family: 'Coloseum';\
+            src: url('path-to-coloseum.woff2') format('woff2'),\
+                 url('path-to-coloseum.woff') format('woff');\
+            font-weight: normal;\
+            font-style: normal;\
+        \}\
+        */\
+        \
+        * \{\
+            margin: 0;\
+            padding: 0;\
+            box-sizing: border-box;\
+        \}\
+        \
+        body \{\
+            font-family: 'Coloseum', Georgia, serif;\
+            background-color: #1a1a1a;\
+            color: #fff;\
+            overflow: hidden;\
+        \}\
+        \
+        .presentation-container \{\
+            width: 100vw;\
+            height: 100vh;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            position: relative;\
+        \}\
+        \
+        .slide \{\
+            display: none;\
+            width: 90%;\
+            max-width: 1200px;\
+            height: 85vh;\
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);\
+            border-radius: 20px;\
+            padding: 60px;\
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);\
+            position: relative;\
+            overflow-y: auto;\
+        \}\
+        \
+        .slide.active \{\
+            display: block;\
+            animation: fadeIn 0.5s ease-in-out;\
+        \}\
+        \
+        @keyframes fadeIn \{\
+            from \{ opacity: 0; transform: translateY(20px); \}\
+            to \{ opacity: 1; transform: translateY(0); \}\
+        \}\
+        \
+        h1 \{\
+            font-size: 3.5em;\
+            color: #d4af37;\
+            margin-bottom: 30px;\
+            font-weight: 300;\
+            letter-spacing: -1px;\
+            line-height: 1.1;\
+        \}\
+        \
+        h2 \{\
+            font-size: 2.8em;\
+            color: #d4af37;\
+            margin-bottom: 40px;\
+            font-weight: 300;\
+            text-align: center;\
+        \}\
+        \
+        h3 \{\
+            font-size: 1.8em;\
+            color: #d4af37;\
+            margin: 30px 0 20px 0;\
+            font-weight: 400;\
+        \}\
+        \
+        p \{\
+            font-size: 1.3em;\
+            line-height: 1.8;\
+            margin-bottom: 20px;\
+            color: #e0e0e0;\
+        \}\
+        \
+        .subtitle \{\
+            font-size: 1.8em;\
+            color: #888;\
+            margin-bottom: 10px;\
+            font-style: italic;\
+        \}\
+        \
+        .title-slide \{\
+            display: flex;\
+            flex-direction: column;\
+            justify-content: center;\
+            align-items: center;\
+            text-align: center;\
+            height: 100%;\
+        \}\
+        \
+        .title-slide h1 \{\
+            font-size: 4em;\
+            margin-bottom: 20px;\
+        \}\
+        \
+        .title-slide .subtitle \{\
+            font-size: 2.2em;\
+            color: #d4af37;\
+            margin-bottom: 10px;\
+        \}\
+        \
+        .title-slide .partner \{\
+            font-size: 1.6em;\
+            color: #888;\
+            margin-top: 30px;\
+        \}\
+        \
+        .logo-container \{\
+            margin: 40px 0;\
+            text-align: center;\
+        \}\
+        \
+        .product-images \{\
+            display: flex;\
+            justify-content: space-around;\
+            align-items: center;\
+            margin: 40px 0;\
+            gap: 40px;\
+        \}\
+        \
+        .product-image-container \{\
+            text-align: center;\
+            flex: 1;\
+        \}\
+        \
+        .product-image-container img \{\
+            margin-bottom: 20px;\
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);\
+            border-radius: 10px;\
+        \}\
+        \
+        .nav-buttons \{\
+            position: fixed;\
+            bottom: 30px;\
+            left: 50%;\
+            transform: translateX(-50%);\
+            display: flex;\
+            gap: 20px;\
+            z-index: 100;\
+        \}\
+        \
+        button \{\
+            background: #d4af37;\
+            color: #1a1a1a;\
+            border: none;\
+            padding: 12px 30px;\
+            font-size: 1.1em;\
+            cursor: pointer;\
+            border-radius: 30px;\
+            transition: all 0.3s ease;\
+            font-family: 'Coloseum', Georgia, serif;\
+        \}\
+        \
+        button:hover \{\
+            background: #b8941f;\
+            transform: translateY(-2px);\
+        \}\
+        \
+        button:disabled \{\
+            background: #666;\
+            cursor: not-allowed;\
+            transform: none;\
+        \}\
+        \
+        .slide-number \{\
+            position: absolute;\
+            top: 30px;\
+            right: 30px;\
+            color: #666;\
+            font-size: 1.2em;\
+        \}\
+        \
+        ul \{\
+            list-style: none;\
+            padding-left: 0;\
+        \}\
+        \
+        li \{\
+            margin-bottom: 15px;\
+            padding-left: 30px;\
+            position: relative;\
+            font-size: 1.2em;\
+            line-height: 1.6;\
+            color: #e0e0e0;\
+        \}\
+        \
+        li:before \{\
+            content: "\'95";\
+            color: #d4af37;\
+            position: absolute;\
+            left: 0;\
+            font-size: 1.5em;\
+        \}\
+        \
+        .highlight \{\
+            color: #d4af37;\
+            font-weight: 600;\
+        \}\
+        \
+        .emphasis \{\
+            font-style: italic;\
+            color: #b0b0b0;\
+            display: block;\
+            margin-top: 10px;\
+            font-size: 0.9em;\
+        \}\
+        \
+        .tier-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(3, 1fr);\
+            gap: 30px;\
+            margin-top: 40px;\
+        \}\
+        \
+        .tier-box \{\
+            background: rgba(212, 175, 55, 0.1);\
+            border: 1px solid #d4af37;\
+            border-radius: 10px;\
+            padding: 30px;\
+            text-align: center;\
+        \}\
+        \
+        .tier-box h4 \{\
+            color: #d4af37;\
+            font-size: 1.4em;\
+            margin-bottom: 15px;\
+        \}\
+        \
+        .tier-box p \{\
+            font-size: 1.1em;\
+            color: #ccc;\
+        \}\
+        \
+        .journey-steps \{\
+            display: flex;\
+            justify-content: space-between;\
+            margin: 40px 0;\
+            position: relative;\
+        \}\
+        \
+        .journey-steps::before \{\
+            content: '';\
+            position: absolute;\
+            top: 30px;\
+            left: 10%;\
+            right: 10%;\
+            height: 2px;\
+            background: #d4af37;\
+            z-index: 0;\
+        \}\
+        \
+        .step \{\
+            text-align: center;\
+            flex: 1;\
+            position: relative;\
+            z-index: 1;\
+        \}\
+        \
+        .step-number \{\
+            width: 60px;\
+            height: 60px;\
+            background: #1a1a1a;\
+            border: 3px solid #d4af37;\
+            border-radius: 50%;\
+            display: flex;\
+            align-items: center;\
+            justify-content: center;\
+            margin: 0 auto 20px;\
+            font-size: 1.5em;\
+            color: #d4af37;\
+        \}\
+        \
+        .step h5 \{\
+            color: #d4af37;\
+            font-size: 1.3em;\
+            margin-bottom: 10px;\
+        \}\
+        \
+        .step p \{\
+            font-size: 1em;\
+            color: #ccc;\
+        \}\
+        \
+        .two-column \{\
+            display: grid;\
+            grid-template-columns: 1fr 1fr;\
+            gap: 60px;\
+            margin-top: 40px;\
+        \}\
+        \
+        .phase-timeline \{\
+            margin-top: 40px;\
+        \}\
+        \
+        .phase \{\
+            margin-bottom: 35px;\
+            padding: 25px;\
+            background: rgba(212, 175, 55, 0.05);\
+            border-left: 4px solid #d4af37;\
+            border-radius: 0 10px 10px 0;\
+        \}\
+        \
+        .phase h4 \{\
+            color: #d4af37;\
+            font-size: 1.5em;\
+            margin-bottom: 10px;\
+        \}\
+        \
+        .phase-time \{\
+            color: #888;\
+            font-size: 1.1em;\
+            margin-bottom: 15px;\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <div class="presentation-container">\
+        <!-- Slide 1: Title -->\
+        <div class="slide active">\
+            <div class="title-slide">\
+                <h1>THE FUTURE OF<br>LUXURY HOSPITALITY</h1>\
+                <div class="subtitle">A Signature Scent Partnership</div>\
+                <div class="partner">Foxwoods Resort Casino + leparfum.ai</div>\
+                <div class="logo-container">\
+                    <img src="leparfum-logo.png" alt="leparfum.ai" style="height: 60px;">\
+                </div>\
+            </div>\
+            <div class="slide-number">1 / 12</div>\
+        </div>\
+\
+        <!-- Slide 2: The Opportunity -->\
+        <div class="slide">\
+            <h2>Memory is the Ultimate Luxury</h2>\
+            <p>In an era where every resort offers thread counts and spa services, the next frontier of differentiation lies in creating unforgettable emotional connections.</p>\
+            <h3>Scent is scientifically proven to be the strongest trigger of memory.</h3>\
+            <img src="foxwoods-luxury.jpg" alt="Foxwoods Luxury Experience" style="width: 100%; max-width: 800px; height: auto; margin: 30px auto; display: block; border-radius: 10px;">\
+            <p>Foxwoods can become the first resort in North America to systematically create lasting memories through personalized fragrance\'97transforming single visits into lifelong connections.</p>\
+            <div class="slide-number">2 / 12</div>\
+        </div>\
+\
+        <!-- Slide 3: Partnership Vision -->\
+        <div class="slide">\
+            <h2>A Tiered Approach to Transformation</h2>\
+            <div class="tier-grid">\
+                <div class="tier-box">\
+                    <h4>SIGNATURE LUXURY</h4>\
+                    <p>The Villas at Foxwoods</p>\
+                    <p class="emphasis">Exclusive amenity for your highest-value guests</p>\
+                </div>\
+                <div class="tier-box">\
+                    <h4>SCALABLE INNOVATION</h4>\
+                    <p>200-Room Pilot Program</p>\
+                    <p class="emphasis">Test revenue generation with mid-tier guests</p>\
+                </div>\
+                <div class="tier-box">\
+                    <h4>EXPERIENTIAL EXPANSION</h4>\
+                    <p>VIP Events & Corporate Programs</p>\
+                    <p class="emphasis">Enhance existing offerings with memorable moments</p>\
+                </div>\
+            </div>\
+            <p style="text-align: center; margin-top: 40px; font-style: italic;">Each tier builds upon the next, creating a comprehensive fragrance ecosystem that touches every level of the Foxwoods experience.</p>\
+            <div class="slide-number">3 / 12</div>\
+        </div>\
+\
+        <!-- Slide 4: Program Portfolio -->\
+        <div class="slide">\
+            <h2>Three Distinct Programs, One Unified Vision</h2>\
+            <h3>1. VILLA SIGNATURE SCENT EXPERIENCE</h3>\
+            <ul>\
+                <li>Pre-arrival personalization journey</li>\
+                <li>Butler-delivered custom fragrances</li>\
+                <li>Pure luxury amenity positioning</li>\
+            </ul>\
+            \
+            <h3>2. HOTEL ROOM REVENUE PILOT</h3>\
+            <ul>\
+                <li>200-room QR code test</li>\
+                <li>Direct purchase opportunity</li>\
+                <li>Measurable ROI within 90 days</li>\
+            </ul>\
+            \
+            <h3>3. VIP EVENT INTEGRATION</h3>\
+            <ul>\
+                <li>Players Club Dinner Series</li>\
+                <li>Corporate gifting programs</li>\
+                <li>Entertainment venue opportunities</li>\
+            </ul>\
+            \
+            <p class="emphasis" style="text-align: center; margin-top: 40px;">Powered by leparfum.ai technology and expertise</p>\
+            <div class="slide-number">4 / 12</div>\
+        </div>\
+\
+        <!-- Slide 5: Villa Experience Overview -->\
+        <div class="slide">\
+            <h2>THE VILLAS AT FOXWOODS<br>Signature Scent Experience</h2>\
+            <h3>The Journey:</h3>\
+            <div class="journey-steps">\
+                <div class="step">\
+                    <div class="step-number">1</div>\
+                    <h5>Book</h5>\
+                    <p>Digital invitation sent immediately</p>\
+                </div>\
+                <div class="step">\
+                    <div class="step-number">2</div>\
+                    <h5>Create</h5>\
+                    <p>5-minute AI personalization with "Esme"</p>\
+                </div>\
+                <div class="step">\
+                    <div class="step-number">3</div>\
+                    <h5>Receive</h5>\
+                    <p>Butler-delivered custom fragrance</p>\
+                </div>\
+                <div class="step">\
+                    <div class="step-number">4</div>\
+                    <h5>Remember</h5>\
+                    <p>Take Foxwoods home forever</p>\
+                </div>\
+            </div>\
+            \
+            <h3>For guests who don't pre-personalize:</h3>\
+            <ul>\
+                <li>10ml signature scent waiting in villa</li>\
+                <li>QR-enabled card for instant personalization</li>\
+                <li>Custom fragrance shipped post-stay</li>\
+            </ul>\
+            <div class="slide-number">5 / 12</div>\
+        </div>\
+\
+        <!-- Slide 6: Villa Experience Packages -->\
+        <div class="slide">\
+            <h2>Curated Gift Collections</h2>\
+            <div class="product-images">\
+                <div class="product-image-container">\
+                    <img src="scent-of-event.jpg" alt="Scent of Event - 10ml bottle" style="width: 100%; max-width: 250px; height: auto;">\
+                    <h4 style="color: #d4af37;">SCENT OF THE EVENT</h4>\
+                    <p style="color: #ccc;">"The Villas at Foxwoods Signature"<br>1 x 10ml</p>\
+                    <p style="font-size: 1.4em;">Starting at $25</p>\
+                </div>\
+                <div class="product-image-container">\
+                    <img src="the-favorite.jpg" alt="The Favorite Collection" style="width: 100%; max-width: 250px; height: auto;">\
+                    <h4 style="color: #d4af37;">THE FAVORITE</h4>\
+                    <p style="color: #ccc;">Personal collection<br>1 x 30ml + 2 x 5ml</p>\
+                    <p style="font-size: 1.4em;">Starting at $95</p>\
+                </div>\
+                <div class="product-image-container">\
+                    <img src="the-splurge.jpg" alt="The Splurge Collection" style="width: 100%; max-width: 250px; height: auto;">\
+                    <h4 style="color: #d4af37;">THE SPLURGE</h4>\
+                    <p style="color: #ccc;">Complete experience<br>3 x 30ml</p>\
+                    <p style="font-size: 1.4em;">Starting at $145</p>\
+                </div>\
+            </div>\
+            <p class="emphasis" style="text-align: center; margin-top: 30px;">White-glove packaging with personalized elements<br>Co-branded: Foxwoods forward, leparfum.ai subtle</p>\
+            <div class="slide-number">6 / 12</div>\
+        </div>\
+\
+        <!-- Slide 7: Hotel Room Pilot -->\
+        <div class="slide">\
+            <h2>200-Room Revenue Test</h2>\
+            <div class="two-column">\
+                <div>\
+                    <h3>Simple Implementation:</h3>\
+                    <ul>\
+                        <li>QR codes displayed on existing hotel room TVs</li>\
+                        <li>"Create Your Signature Foxwoods Scent" messaging</li>\
+                        <li>A/B test different calls-to-action</li>\
+                    </ul>\
+                    \
+                    <h3>Guest Journey:</h3>\
+                    <ul>\
+                        <li>See invitation on TV</li>\
+                        <li>Scan QR code</li>\
+                        <li>Complete 5-minute personalization</li>\
+                        <li>Purchase their custom fragrance</li>\
+                        <li>Receive at home with Foxwoods branding</li>\
+                    </ul>\
+                </div>\
+                <div>\
+                    <h3>Measurable Results:</h3>\
+                    <ul>\
+                        <li>Conversion rates by message type</li>\
+                        <li>Average order values</li>\
+                        <li>Guest satisfaction scores</li>\
+                        <li>Repeat purchase behavior</li>\
+                    </ul>\
+                </div>\
+            </div>\
+            <div class="slide-number">7 / 12</div>\
+        </div>\
+\
+        <!-- Slide 8: VIP Dinner Series -->\
+        <div class="slide">\
+            <h2>Players Club VIP Dinner Series</h2>\
+            <p style="text-align: center; font-size: 1.4em; margin-bottom: 40px;">An Unforgettable Two-Night Journey</p>\
+            \
+            <div class="two-column">\
+                <div>\
+                    <h3>Dinner #1: The Discovery</h3>\
+                    <ul>\
+                        <li>leparfum.ai Co-Founder welcomes guests</li>\
+                        <li>Personalized Discovery Set at each place setting</li>\
+                        <li>Introduction to scent personalization</li>\
+                        <li>Guests create preferences between courses</li>\
+                    </ul>\
+                </div>\
+                <div>\
+                    <h3>Dinner #2: The Reveal</h3>\
+                    <ul>\
+                        <li>Custom "Splurge" collection awaits</li>\
+                        <li>Three personalized 30ml fragrances</li>\
+                        <li>Includes signature scent + event fragrance</li>\
+                        <li>Social media worthy unboxing moment</li>\
+                    </ul>\
+                </div>\
+            </div>\
+            \
+            <p class="emphasis" style="text-align: center; margin-top: 40px;">Perfect for high-value player retention and acquisition</p>\
+            <div class="slide-number">8 / 12</div>\
+        </div>\
+\
+        <!-- Slide 9: Expansion Opportunities -->\
+        <div class="slide">\
+            <h2>Scalable Across Every Foxwoods Experience</h2>\
+            \
+            <h3>CORPORATE & PRIVATE EVENTS</h3>\
+            <ul>\
+                <li>Board retreats in Grand Pequot Tower</li>\
+                <li>C-suite meetings in Foxwoods Boardroom</li>\
+                <li>Fundraising galas and milestone celebrations</li>\
+            </ul>\
+            \
+            <h3>ENTERTAINMENT VENUES</h3>\
+            <ul>\
+                <li>VIP concert experiences</li>\
+                <li>Sports event premium packages</li>\
+                <li>Celebrity meet-and-greet additions</li>\
+            </ul>\
+            \
+            <h3>SPECIALTY EXPERIENCES</h3>\
+            <ul>\
+                <li>Lake of Isles golf tournaments</li>\
+                <li>Wave day party VIP cabanas</li>\
+                <li>Wedding and event packages</li>\
+            </ul>\
+            \
+            <p class="emphasis" style="text-align: center; margin-top: 40px;">Each touchpoint reinforces Foxwoods as a destination that creates lasting memories</p>\
+            <div class="slide-number">9 / 12</div>\
+        </div>\
+\
+        <!-- Slide 10: Operations -->\
+        <div class="slide">\
+            <h2>Seamless Implementation</h2>\
+            \
+            <h3>FULFILLMENT STRUCTURE</h3>\
+            <ul>\
+                <li><span class="highlight">Immediate:</span> Pre-stocked signature scents for villas</li>\
+                <li><span class="highlight">Custom:</span> 4-6 week lead time for personalized orders</li>\
+                <li><span class="highlight">Drop-ship:</span> Direct delivery to property or guest homes</li>\
+            </ul>\
+            \
+            <h3>PARTNERSHIP MODEL</h3>\
+            <ul>\
+                <li>leparfum.ai handles all production and technology</li>\
+                <li>3PM logistics support included</li>\
+                <li>Butler training program provided</li>\
+                <li>Optional on-site brand ambassador for launches</li>\
+            </ul>\
+            \
+            <h3>QUALITY ASSURANCE</h3>\
+            <ul>\
+                <li>White-glove packaging standards</li>\
+                <li>Foxwoods brand prominent, leparfum.ai subtle</li>\
+                <li>Dedicated account management</li>\
+                <li>Quarterly business reviews</li>\
+            </ul>\
+            \
+            <div class="slide-number">10 / 12</div>\
+        </div>\
+\
+        <!-- Slide 11: Benefits -->\
+        <div class="slide">\
+            <h2>Why This Partnership Transforms Your Business</h2>\
+            \
+            <h3>IMMEDIATE DIFFERENTIATION</h3>\
+            <ul>\
+                <li>First resort in North America with systematic scent personalization</li>\
+                <li>Ownable luxury amenity no competitor can quickly replicate</li>\
+                <li>Press-worthy innovation story</li>\
+            </ul>\
+            \
+            <h3>ENHANCED GUEST VALUE</h3>\
+            <ul>\
+                <li>Measurable increase in guest satisfaction scores</li>\
+                <li>Extended brand experience beyond property</li>\
+                <li>Scientific memory creation = stronger loyalty</li>\
+            </ul>\
+            \
+            <h3>REVENUE OPPORTUNITIES</h3>\
+            <ul>\
+                <li>New income stream from hotel pilot program</li>\
+                <li>Premium pricing for VIP experiences</li>\
+                <li>Corporate gifting and event add-ons</li>\
+            </ul>\
+            \
+            <h3>OPERATIONAL EFFICIENCY</h3>\
+            <ul>\
+                <li>No infrastructure changes required</li>\
+                <li>Vendor-managed fulfillment</li>\
+                <li>Minimal staff training needed</li>\
+            </ul>\
+            \
+            <div class="slide-number">11 / 12</div>\
+        </div>\
+\
+        <!-- Slide 12: Next Steps -->\
+        <div class="slide">\
+            <h2>Launch Timeline</h2>\
+            \
+            <div class="phase-timeline">\
+                <div class="phase">\
+                    <h4>PHASE 1: VILLA PILOT</h4>\
+                    <div class="phase-time">Month 1-3</div>\
+                    <ul>\
+                        <li>Soft launch with 20 villa bookings</li>\
+                        <li>Refine butler service protocols</li>\
+                        <li>Gather guest feedback</li>\
+                    </ul>\
+                </div>\
+                \
+                <div class="phase">\
+                    <h4>PHASE 2: HOTEL ROOM TEST</h4>\
+                    <div class="phase-time">Month 2-4</div>\
+                    <ul>\
+                        <li>Deploy QR codes to 200 rooms</li>\
+                        <li>A/B test messaging</li>\
+                        <li>Analyze conversion data</li>\
+                    </ul>\
+                </div>\
+                \
+                <div class="phase">\
+                    <h4>PHASE 3: VIP INTEGRATION</h4>\
+                    <div class="phase-time">Month 3-6</div>\
+                    <ul>\
+                        <li>Launch Players Club dinner series</li>\
+                        <li>Add to corporate event packages</li>\
+                        <li>Expand to entertainment venues</li>\
+                    </ul>\
+                </div>\
+                \
+                <div class="phase">\
+                    <h4>PHASE 4: FULL ROLLOUT</h4>\
+                    <div class="phase-time">Month 6+</div>\
+                    <ul>\
+                        <li>Scale based on pilot results</li>\
+                        <li>Develop signature Foxwoods scent library</li>\
+                        <li>Create seasonal and event-specific fragrances</li>\
+                    </ul>\
+                </div>\
+            </div>\
+            \
+            <p style="text-align: center; font-size: 1.8em; color: #d4af37; margin-top: 40px;">Let's create the future of luxury hospitality together.</p>\
+            \
+            <div class="slide-number">12 / 12</div>\
+        </div>\
+    </div>\
+\
+    <div class="nav-buttons">\
+        <button id="prevBtn" onclick="changeSlide(-1)">Previous</button>\
+        <button id="nextBtn" onclick="changeSlide(1)">Next</button>\
+    </div>\
+\
+    <script>\
+        let currentSlide = 0;\
+        const slides = document.querySelectorAll('.slide');\
+        const totalSlides = slides.length;\
+\
+        function showSlide(n) \{\
+            slides.forEach(slide => slide.classList.remove('active'));\
+            \
+            if (n >= totalSlides) currentSlide = 0;\
+            if (n < 0) currentSlide = totalSlides - 1;\
+            \
+            slides[currentSlide].classList.add('active');\
+            \
+            // Update button states\
+            document.getElementById('prevBtn').disabled = currentSlide === 0;\
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides - 1;\
+        \}\
+\
+        function changeSlide(n) \{\
+            currentSlide += n;\
+            showSlide(currentSlide);\
+        \}\
+\
+        // Keyboard navigation\
+        document.addEventListener('keydown', (e) => \{\
+            if (e.key === 'ArrowLeft') changeSlide(-1);\
+            if (e.key === 'ArrowRight') changeSlide(1);\
+        \});\
+\
+        // Initialize\
+        showSlide(currentSlide);\
+    </script>\
+</body>\
+</html>}
